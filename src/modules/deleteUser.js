@@ -1,5 +1,5 @@
 'use strict'
-
+import { render } from './render'
 export const removeUsers = () => {
 
     const tbody = document.querySelector('#table-body');

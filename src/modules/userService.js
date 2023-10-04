@@ -18,6 +18,24 @@ export class UserService {
     removeUser(id) {
         return fetch(this.url + `/${id}`, {
             method: 'DELETE'
-        })
+        }).then(res => res.json())
+    }
+
+    changeUser(id, data){
+        return fetch(this.url + `/${id}`, {
+            method: 'PATCH',
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type":"application/json"
+            }
+        }).then(res => res.json())
+    }
+
+    getUser(id){
+
+    }
+
+    editUser(id, user){
+        
     }
 }

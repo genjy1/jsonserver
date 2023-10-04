@@ -1,11 +1,18 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Jacob",
-      "email": "thornton@gmail.com",
-      "children": true,
-      "permissions": true
+      "name": "Alex",
+      "email": "alex@alex.text",
+      "chidren": false,
+      "permissions": false,
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@email.ru",
+      "chidren": false,
+      "permissions": true,
+      "id": 4
     }
   ]
 }

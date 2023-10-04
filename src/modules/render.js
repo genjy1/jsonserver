@@ -14,9 +14,10 @@ export const render = (users) => {
                                 <td>
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch"
-                                            id="form-children" ${user.permissions ? 'checked' : ''}>
+                                            id="form-children" ${user.permissions ?'checked':''}>
                                     </div>
                                 </td>
+                                
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-warning">
