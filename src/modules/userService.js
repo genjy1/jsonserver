@@ -32,10 +32,17 @@ export class UserService {
     }
 
     getUser(id){
+        return fetch(this.url + `/${id}`).then(res => res.json())
 
     }
 
     editUser(id, user){
-        
+        return fetch(this.url + `/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(user),
+            headers: {
+                "Content-Type":"application/json"
+            }
+        }).then(res => res.json())
     }
 }
