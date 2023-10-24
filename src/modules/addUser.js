@@ -17,7 +17,7 @@ export const addUsers = () =>{
                 const user = {
                     name: nameInput.value,
                     email: emailInput.value,
-                    chidren: childrenInput.checked,
+                    children: childrenInput.checked,
                     permissions: false
                 }
             }

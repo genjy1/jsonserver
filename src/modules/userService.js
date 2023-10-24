@@ -45,4 +45,16 @@ export class UserService {
             }
         }).then(res => res.json())
     }
+
+    filterUsers(filterOption) {
+        return fetch(this.url + `?${filterOption}=true`).then(res => res.json())
+    }
+
+    getSortUsers(sortOption){
+        return fetch(this.url + `?_sort=${sortOption.name}&_order=${sortOption.value}`).then(res => res.json())
+    }
+
+    getSearchUsers(str){
+        return fetch(this.url + `?name_like=${str}`).then(res => res.json())
+    }
 }

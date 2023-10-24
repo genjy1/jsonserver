@@ -1,10 +1,10 @@
 export const editUsers = () =>{
     const tbody = document.querySelector('#table-body');
     const form = document.querySelector('form');
-    const nameInput = form.querySelector('input#form-name')
-    const emailInput = form.querySelector('input#form-email')
-    const childrenInput = form.querySelector('input#form-children')
-    
+    const nameInput = form.querySelector('input#form-name');
+    const emailInput = form.querySelector('input#form-email');
+    const childrenInput = form.querySelector('input#form-children');
+
     tbody.addEventListener('click', (event) => {
        if (event.target.closest('.btn-edit')) {
             const tr = event.target.closest('tr');
@@ -13,7 +13,7 @@ export const editUsers = () =>{
                 console.log(user);
                 nameInput.value = user.name;
                 emailInput.value = user.email;
-                childrenInput.value = user.children;
+                childrenInput.checked = user.children;
 
                 form.dataset.method = id;
             })
@@ -27,7 +27,7 @@ export const editUsers = () =>{
                 const user = {
                     name: nameInput.value,
                     email: emailInput.value,
-                    chidren: childrenInput.checked,
+                    children: childrenInput.checked,
                     permissions: false
                 }
                 userService.editUser(id,user).then(() => {
